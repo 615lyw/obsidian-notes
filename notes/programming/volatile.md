@@ -14,7 +14,7 @@ date modified: 2022-08-10, 15:20:56
     - [关键字: volatile详解 | Java 全栈知识体系](https://pdai.tech/md/java/thread/java-thread-x-key-volatile.html)
     - [8 volatitle - 深入浅出Java多线程](https://redspider.gitbook.io/concurrent/di-er-pian-yuan-li-pian/8)
     - 《深入理解 Java 虚拟机》-12.3.3-volatile
-    - [[内存屏障]]
+    - [内存屏障](notes/programming/内存屏障.md)
 
 ---
 
@@ -41,10 +41,10 @@ JVM 提供的最轻量级同步方式。
 ## 作用（语义）
 
 - 禁止指令重排序
-    - 维护 happens-before 关系（[[内存模型-JMM#volatile 变量规则]]），volatile 写入不能向前排，读取不能向后排
+    - 维护 happens-before 关系（[内存模型-JMM](notes/programming/内存模型-JMM.md)），volatile 写入不能向前排，读取不能向后排
         - 对 volatile 变量的写入不能重排到写入之前的操作之前
         - 对 volatile 的读取操作不能被重排到后续操作之后
-    - 经典问题：[[单例模式 Singleton#指令重排序问题]]
+    - 经典问题：[单例模式 Singleton](notes/programming/单例模式%20Singleton.md) DCL
 - 保证可见性
     - 写入 volatile 对于后续读 volatile 是可见的（volatile 变量规则）
     - 写入 volatile 之前的操作对于后续读 volatile 后的操作也是可见的（volatile 变量规则 + 程序顺序性规则）
@@ -95,7 +95,7 @@ IDEA 还有提示：
 
 ## 实现原理
 
-通过 [[内存屏障]] 实现可见性和禁止指令重排序。
+通过 [内存屏障](notes/programming/内存屏障.md) 实现可见性和禁止指令重排序。
 
 ### 禁止指令重排序实现原理
 
@@ -122,13 +122,13 @@ volatile 对生成字节码没有影响，即无论变量有没有 volatile 修�
 
 **上面这个规则表如何得到的？**
 
-- 根据 volatile 写操作之前的任何操作 Happens-Before volatile 读操作（[[内存模型-JMM#volatile 变量规则]]），故写操作不能往前排，即在写操作前应插入内存屏障（对应第四列）
+- 根据 volatile 写操作之前的任何操作 Happens-Before volatile 读操作，故写操作不能往前排，即在写操作前应插入内存屏障（对应第四列）
 - 读 volatile 后根据读到的值做一些事情，那么读操作便不能往后排，故在后面插入内存屏障（对应第三行）
 - 针对先 volatile 写，再 volatile 读的顺序情况，为了保证后面的读取能看到前面写入导致的变化，所以需要插入内存屏障（对应第四行第三列）
 
 ### 保证可见性实现原理
 
-- 对于 volatile 变量本身（只是一个粗略模型，适用于简单 CPU 模型，如果是 [[MESI 缓存一致性协议]] 模型，则不准确）
+- 对于 volatile 变量本身（只是一个粗略模型，适用于简单 CPU 模型，如果是 [MESI 缓存一致性协议](notes/programming/MESI%20缓存一致性协议.md) 模型，则不准确）
     - 读取 volatile 变量不能使用缓存，每次读取都要去内存
     - 写入（缓存） volatile 变量后立即写回内存
 - 对于 volatile 前后的操作，通过插入内存屏障禁止重排保证可见性

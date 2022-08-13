@@ -98,10 +98,10 @@ public void set(T value) {
 
 **1 从语义上可以理解为：`ThreadLocal<T>` 中有一个 `Map<Thread, T>`，保存了特定于线程的值。为什么不这样实现呢？**
 
-原因：避免 [[内存泄漏]]。当线程终止后，保存在 Thread 中的本地存储值不可达，被垃圾回收。但若保存在 ThreadLocal 中，由于 ThreadLocal 生命周期长于 Thread，当线程终止后，仍存在对线程对应的本地存储值的强引用，故无法被垃圾回收。
+原因：避免 [内存泄漏](notes/programming/内存泄漏.md)。当线程终止后，保存在 Thread 中的本地存储值不可达，被垃圾回收。但若保存在 ThreadLocal 中，由于 ThreadLocal 生命周期长于 Thread，当线程终止后，仍存在对线程对应的本地存储值的强引用，故无法被垃圾回收。
 
-**2 在 [[线程池]] 中使用 ThreadLocal 可能导致 [[内存泄漏]]。**
+**2 在 [线程池](notes/programming/线程池.md) 中使用 ThreadLocal 可能导致 [内存泄漏](notes/programming/内存泄漏.md)。**
 
 引用链：`Thread -> ThreadLocalMap -> Entry[] -> Entry=(WeakReference ThreadLocal, Object value)`
 
-线程池中的线程生命周期长于 ThreadLocal 的生命周期，当 ThreadLocal 到达自己的生命周期时（没有对 ThreadLocal 的强引用了，仅存在 [[Java 4 种引用类型|WeakReference]]），ThreadLocal 可以被回收，Thread 中**被强引用的**本地存储变量由于 ThreadLocal 对象被回收而**不可达**造成内存泄漏。
+线程池中的线程生命周期长于 ThreadLocal 的生命周期，当 ThreadLocal 到达自己的生命周期时（没有对 ThreadLocal 的强引用了，仅存在 [Java 4 种引用类型](inbox/Java%204%20种引用类型.md) 中的 WeakReference），ThreadLocal 可以被回收，Thread 中**被强引用的**本地存储变量由于 ThreadLocal 对象被回收而**不可达**造成内存泄漏。
