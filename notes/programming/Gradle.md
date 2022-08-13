@@ -1,0 +1,64 @@
+# Gradle
+
+- Ref
+    - [Gradle 官网](https://gradle.org/)
+    - [Gradle: build.gradle vs. settings.gradle vs. gradle.properties](https://www.baeldung.com/gradle-build-settings-properties)
+- Gradle 是什么？
+    - 开源的自动化构建工具
+- Gradle vs Maven
+    - Gradle 拓展性更强
+    - Gradle 利用构建缓存、后台进程等性能特性使得项目构建速度更快
+    - Gradle 和 Maven 的依赖管理机制也不同
+- 安装 Gradle
+    - 前提条件：已安装 JDK 且版本 >= 8
+    - 通过 homebrew 安装：`brew install gradle`
+    - 验证是否成功安装：`gradle -v`
+- Gradle 项目相关文件
+    - build.gradle 文件
+        - 构建**配置脚本**，采用基于 Groovy 封装的 DSL(domain specific language) 书写
+        - 一个 build.gradle 对应一个 project 实例
+    - gradle.properties 文件
+        - 配置 Gradle 框架的行为，默认不自动创建
+        - 由 key-value 组成
+        - 可以通过 `key=value` 的形式定义任意变量，在 build.gradle 中可以访问 key
+        - Gradle 框架属性有读取顺序优先级，gradle.properties 并不是最高优先级
+    - setting.gradle 文件
+        - Groovy 脚本
+        - 一次构建只执行一次 setting.gradle 文件
+        - 多项目构建必须有，单项目构建为可选
+- Gradle 构建基础
+    - Project：一个项目实例
+    - Task
+        - 每个 Task 代表构建过程中的一个原子操作，例如编译、打包等
+        - 一个 Project 由多个 Task 构成（Project 实例里保存了 Task 对象集合）
+        - 多个任务 task 组成的有向无环图，方向表明各 task 之间的依赖关系
+            - 我们可以通过构建脚本或使用插件来形成任务图，即创建一个构建过程
+            - ![](https://pic-bed-615.oss-cn-beijing.aliyuncs.com/qDVUrF.png)
+    - Action
+        - Task 的组成部分，有序列表
+    - 单项目构建
+        - 只有一个 build.gradle 文件
+    - 多项目构建
+        - 每个项目一个 build.gradle 文件
+    - 构建的生命周期
+        - It launches as a new JVM process
+        - It parses the __gradle.properties__ file and configures Gradle accordingly
+        - Next, it creates a __Settings__ instance for the build
+        - Then, it evaluates the __settings.gradle__ file against the __Settings__ object
+        - It creates a hierarchy of __Projects__, based on the configured __Settings__ object
+        - Finally, it executes each __build.gradle__ file against its project
+- 插件
+    - 插件用于拓展 Gradle
+    - Java plugin
+        - 自带插件之一，针对 Java 项目提供了编译，测试，打包等功能
+        - Java 插件遵循约定的 Maven 项目结构
+        - 使用 Java 插件，在构建脚本中添加 `apply plugin: 'java'`
+        - 提供隐式任务
+            - clean 同 maven
+            - assemble 同 maven-compile（编译、打包）
+            - check 同 package（compile+test）
+- 依赖管理
+    - 添加仓库
+    - 添加依赖
+- Gradle Wrapper
+- 依赖管理
