@@ -9,8 +9,6 @@ date modified: 2022-08-12, 21:03:35
 
 # Partial notes
 
-因为不是使用传统记笔记的方法，所以笔记略显零散，挑选一些完整的笔记展示在此：
-
 - [volatile](notes/programming/volatile.md)
 - [ThreadLocal](notes/programming/ThreadLocal.md)
 - [内存模型-JMM](notes/programming/内存模型-JMM.md)
@@ -25,7 +23,5 @@ date modified: 2022-08-12, 21:03:35
 - …
 
 # 留念
-
-因为某些原因不得不清空历史 commit，截图留念。
 
 ![img](Z-attachments/Pasted%20image%2020220813235918.png)
