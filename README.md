@@ -22,6 +22,12 @@ date modified: 2022-08-12, 21:03:35
 - [Unicode](notes/programming/Unicode.md)
 - …
 
+# LeetCode Algorithm
+
+| #   | Title                                                   | Solution | Difficulty |
+| --- | ------------------------------------------------------- | -------- | ---------- |
+| 704 | [二分查找](https://leetcode.cn/problems/binary-search/) | [[二分查找]]         | 简单       |
+
 # 留念
 
 ![img](Z-attachments/Pasted%20image%2020220813235918.png)
