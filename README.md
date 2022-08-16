@@ -24,9 +24,9 @@ date modified: 2022-08-12, 21:03:35
 
 # LeetCode Algorithm
 
-| #   | Title                                                   | Solution | Difficulty |
-| --- | ------------------------------------------------------- | -------- | ---------- |
-| 704 | [二分查找](https://leetcode.cn/problems/binary-search/) | [[二分查找]]         | 简单       |
+- [704. 二分查找](notes/leetcode/704.%20二分查找.md)
+- [27. 移除元素](inbox/27.%20移除元素.md)
+- [977. 有序数组的平方](inbox/977.%20有序数组的平方.md)
 
 # 留念
 
