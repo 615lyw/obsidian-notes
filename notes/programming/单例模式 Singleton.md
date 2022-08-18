@@ -1,6 +1,6 @@
 ---
 date created: 2021-11-25, 17:14:46
-date modified: 2022-06-20, 11:06:44
+date modified: 2022-08-18, 11:46:20
 ---
 
 # Meta
@@ -83,7 +83,7 @@ public class Singleton {
 
 ```java
 public class Singleton {
-    private static Singleton instance;
+    private static volatile Singleton instance;
 
     private Singleton() {}
 
