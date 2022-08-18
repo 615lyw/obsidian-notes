@@ -25,9 +25,9 @@ date modified: 2022-08-12, 21:03:35
 # LeetCode Algorithm
 
 - [704. 二分查找](notes/leetcode/704.%20二分查找.md)
-- [27. 移除元素](inbox/27.%20移除元素.md)
-- [977. 有序数组的平方](inbox/977.%20有序数组的平方.md)
-- [209. 长度最小的子数组](inbox/209.%20长度最小的子数组.md)
+- [27. 移除元素](notes/leetcode/27.%20移除元素.md)
+- [977. 有序数组的平方](notes/leetcode/977.%20有序数组的平方.md)
+- [209. 长度最小的子数组](notes/leetcode/209.%20长度最小的子数组.md)
 - 
 
 # 留念
