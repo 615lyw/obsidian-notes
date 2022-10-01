@@ -4,7 +4,9 @@
 - parent :: 
 - siblings :: 
 - child :: 
-- refs: https://ubuntu.com/server/docs/network-configuration
+- refs: 
+    - https://ubuntu.com/server/docs/network-configuration
+    - https://netplan.io/reference
 
 ---
 
