@@ -42,5 +42,5 @@ date modified: 2022-09-13, 23:19:02
     - [242. 有效的字母异位词](notes/leetcode/242.%20有效的字母异位词.md)
     - [349. 两个数组的交集](notes/leetcode/349.%20两个数组的交集.md)
     - [202. 快乐数](notes/leetcode/202.%20快乐数.md)
-    - [[1. 两数之和]]
+    - [1. 两数之和](notes/leetcode/1. 两数之和.md)
     - 
