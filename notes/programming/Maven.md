@@ -1,6 +1,6 @@
 ---
 date created: 2022-03-25, 17:26:04
-date modified: 2022-09-06, 21:34:03
+date modified: 2022-10-04, 12:40:44
 ---
 
 # Meta
@@ -9,7 +9,9 @@ date modified: 2022-09-06, 21:34:03
 - parent ::
 - siblings ::
 - child ::
-- refs: 《Maven 实战》
+- refs:
+    - 《Maven 实战》
+    - https://maven.apache.org/guides/index.html
 
 ---
 
@@ -27,7 +29,6 @@ date modified: 2022-09-06, 21:34:03
 Maven 抽象了一个完整的, 标准的构建生命周期模型. 我们可以简单地通过一条命令让构建过程全自动化。
 
 [[Maven 安装&预配置]]
-
 
 ## maven 坐标
 
@@ -199,3 +200,7 @@ scope:
 聚合是为了通过命令一次性构建多个模块。
 
 继承是为了提取重复项，统一管理。
+
+# 插件
+
+`插件` 是具有共通目的的 `目标` 集合，形式：`插件名:目标名`。
