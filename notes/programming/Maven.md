@@ -201,6 +201,14 @@ scope:
 
 继承是为了提取重复项，统一管理。
 
+# 生命周期
+
+每一个阶段称为：phase。
+
+`mvn phase` ：Maven executes every phase in the sequence up to and including the one defined
+
 # 插件
 
 `plugin` 是具有共通目的的 `goals` 集合，形式：`插件名:目标名`。
+
+`mvn plugin:goal`
