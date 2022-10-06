@@ -203,12 +203,14 @@ scope:
 
 # 生命周期
 
-每一个阶段称为：phase。
+每一个阶段称为：*phase*。
 
-`mvn phase` ：Maven executes every phase in the sequence up to and including the one defined
+`mvn phase` ：Maven executes every phase in the sequence up to and including the one defined.
+
+*phase* 本质为一个 `goal`。
 
 # 插件
 
-`plugin` 是具有共通目的的 `goals` 集合，形式：`插件名:目标名`。
+*plugin* 是具有共通目的的 *goals* 集合，形式：`插件名:目标名`。
 
 `mvn plugin:goal`
