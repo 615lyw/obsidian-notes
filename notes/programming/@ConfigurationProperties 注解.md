@@ -1,5 +1,3 @@
-#SpringBoot
-
 # ConfigurationProperties 注解
 
 作用：填充外部属性配置至 Bean 中，实现通过配置文件给组件的成员变量赋值。
