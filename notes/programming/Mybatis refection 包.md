@@ -1,7 +1,7 @@
 # Related
 
-[[装饰器模式 Decorator]]
-[[反射]]
+- [[装饰器模式 Decorator]]
+- [[反射]]
 
 ---
 

@@ -38,7 +38,7 @@ date modified: 2022-05-27, 15:28:20
     - [[Gradle]]
     - [[Spring 全家桶]]
     - [[Tomcat]]
-    - [[Mybatis]]
+    - [[Mybatis 使用]]
     - [[Mybatis-Plus]]
     - [[Lombok]]
     - [[XML]]
