@@ -15,7 +15,7 @@ date modified: 2022-07-05, 21:00:37
 
 ---
 
-自动装配：引入 starter，再简单配置（在 `application.yml` 中）一下即可直接使用。避免繁琐的配置过程。
+自动装配：引入 starter，在 `application.yml` 中简单配置一下即可直接使用，避免繁琐的全量配置过程。
 
 `@SpringBootApplication` 中核心注解 `@EnableAutoConfiguration`。
 
