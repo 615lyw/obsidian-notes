@@ -1,6 +1,6 @@
 # SpringBoot
 
-基于 [[Index-SpringFramework]] 拓展，用最小默认配置简化了 Spring 应用的初始化配置，解决了配置繁琐和应用部署繁琐的问题。
+基于 [[MOC SpringFramework]] 拓展，用最小默认配置简化了 Spring 应用的初始化配置，解决了配置繁琐和应用部署繁琐的问题。
 
 # 核心思想：约定优于配置
 

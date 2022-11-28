@@ -1,6 +1,6 @@
 # Spring 全家桶
 
-- [[Index-SpringFramework]]
+- [[MOC SpringFramework]]
 - [[SpringMVC]]
-- [[SpringBoot]]
+- [[MOC SpringBoot]]
 - [[SpringCloud]]
