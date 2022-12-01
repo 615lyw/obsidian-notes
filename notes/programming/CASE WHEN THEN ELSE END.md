@@ -15,7 +15,7 @@ date modified: 2022-05-24, 19:58:46
 
 语法：
 
-```
+```sql
 # 写法一
 CASE
     WHEN condition THEN statement
