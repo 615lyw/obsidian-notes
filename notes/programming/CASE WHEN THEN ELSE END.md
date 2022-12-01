@@ -21,7 +21,7 @@ CASE
     WHEN condition THEN statement
     [WHEN condition THEN statement] ...
     [ELSE statement]
-END AS alias
+END [AS alias]
 
 
 # 写法二
@@ -29,7 +29,7 @@ CASE case_value
     WHEN when_value THEN statement
     [WHEN when_value THEN statement] ...
     [ELSE statement]
-END AS alias
+END [AS alias]
 ```
 
 - 返回第一个 condition 为 true 的结果
