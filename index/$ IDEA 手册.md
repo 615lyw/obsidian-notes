@@ -49,3 +49,12 @@
 # Maven 依赖管理
 
 https://www.jetbrains.com/help/idea/maven-support.html
+
+# EmacsIdea 插件
+
+常用：
+
+1. 复制一个 word 到光标处：ctrl+w，ctrl+w
+2. 删除一个 word：ctrl+d，ctrl+w
+
+![[Pasted image 20221130145533.png]]
