@@ -18,5 +18,3 @@ The mapping for each field has a field type (not to be confused with document ty
 Terms Aggregation
 
 By default, the terms aggregation will return the buckets for the top ten terms ordered by the doc_count. One can change this default behaviour by setting the size parameter.
-
-![[Pasted image 20221209113748.png]]
