@@ -48,9 +48,9 @@ HashMap 实现中要点：
         - **优化点：旧数组中同一位置的元素，rehash 后在新数组下标要么和原下标一样，要么是原数组下标 + 原数组大小**
         - 实现：判断高位是 0 还是 1
 - 成员变量含义
-    - loadFactor：加载因子控制 HashMap 存放元素的疏密程度，可以大于 1
+    - loadFactor：控制 HashMap 存放元素的疏密程度，可以大于 1
         - 如果内存空间很多而又对时间效率要求很高，可以减小 loadFactor 的值
         - 如果内存空间紧张而对时间效率要求不高，可以增大 loadFactor 的值
     - **capacity：数组长度，即 length（length 更容易辨析）**
     - threshold = length * loadFactor
-        - threshold 是 HashMap 所能容纳的最大键值对个数
+        - threshold 表示 HashMap 所能容纳的最大元素个数，size > threshold 时进行 resize 扩容
