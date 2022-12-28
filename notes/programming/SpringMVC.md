@@ -296,11 +296,11 @@ public String foo(HttpSession session) {
 
 cookie
 
-# Restful 风格
+# RESTful API 风格
 
 以前 url-pattern 为：queryUserById? id=5
 
-Restful 风格：
+RESTful 风格：
 
 - 请求 URL 设计风格：操作主体/行为/参数，比如：/liuyiwei/article/details/123
 - 返回值为 json 数据
