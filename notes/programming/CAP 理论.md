@@ -1,13 +1,13 @@
 ---
 date created: 2021-05-12, 07:25:21
-date modified: 2022-07-13, 18:25:45
+date modified: 2022-12-28, 20:32:26
 ---
 
 # Meta
 
 - alias:
 - parent :: [[分布式]]
-- siblings ::
+- siblings :: [[BASE 理论]]
 - child ::
 - refs:
     - [CAP & BASE理论 | JavaGuide](https://javaguide.cn/distributed-system/theorem&algorithm&protocol/cap&base-theorem.html#cap%E7%90%86%E8%AE%BA)
@@ -35,11 +35,11 @@ date modified: 2022-07-13, 18:25:45
 
 > A non-failing node will return a reasonable response within a reasonable amount of time (no error or timeout).
 
-非故障节点在一个合理的时间内返回一个合理的响应（不是失败或超时 [[3 种接口响应结果]]）。
+非故障节点在一个合理的时间内返回一个响应，而不是超时 [[3 种接口响应结果]]。
 
-非故障节点指的是节点本身没有宕机，也没有离线。
+非故障节点指的是节点本身没有宕机、仍可以和客户端通信。
 
-合理的响应不一定是一个正确的响应。比如应该返回 100, 但返回了 90.
+响应的结果不一定是正确的。比如库存此时应该返回 100，但返回了 90。
 
 ## 分区容忍性（Partition Tolerance）
 
