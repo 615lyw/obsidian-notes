@@ -5,7 +5,7 @@ date modified: 2022-12-30, 23:16:18
 
 什么时候遇到注解继承的问题？
 
-背景：在项目中，为了方便其他微服务进行 [[Feign]] 调用，有一个 Feign 接口类，其中定义了该微服务 Controller 中的所有接口，且 Controller 实现了该 Feign 接口。
+背景：在项目中，为了方便其他微服务进行 [[OpenFeign]] 调用，有一个 Feign 接口类，其中定义了该微服务 Controller 中的所有接口，且 Controller 实现了该 Feign 接口。
 
 ```java
 @FeignClient
