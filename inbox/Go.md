@@ -118,3 +118,22 @@ func main() {
   fmt.Println(C)
 }
 ```
+
+# If/Else
+
+A statement can precede conditionals; any variables declared in this statement **are available in the current and all subsequent branches.**
+
+```go
+if num := 9; num < 0 {
+    fmt.Println(num, "is negative")
+} else if num < 10 {
+    fmt.Println(num, "has 1 digit")
+} else {
+    fmt.Println(num, "has multiple digits")
+}
+```
+
+没有三元运算符。
+
+# Switch
+
