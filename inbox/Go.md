@@ -150,3 +150,6 @@ Your module specifies dependencies needed to run your code, including the Go ver
 [modules 命名最佳实践](https://go.dev/doc/modules/managing-dependencies#naming_module)
 
 Remember that package names carry most of the weight of describing functionality. The module path creates a namespace for those package names.
+
+**In Go, code executed as an application must be in a main package.**
+
