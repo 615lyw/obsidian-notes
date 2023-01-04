@@ -139,22 +139,23 @@ if num := 9; num < 0 {
 
 可用于类型判断。
 
-# modules and packages
-
-Go code is grouped into packages, and packages are grouped into modules. 
-
-Your module specifies dependencies needed to run your code, including the Go version and the set of other modules it requires.
+# module
 
 (Go Modules 类似 [[Maven]]，方便管理依赖)
 
 [modules 命名最佳实践](https://go.dev/doc/modules/managing-dependencies#naming_module)
 
-Remember that package names carry most of the weight of describing functionality. The module path creates a namespace for those package names.
+# packages
+
+- 一个 directory 下只能存在一个 package
+- 按惯例，package name 和 derectory name 保持一致
+
+
+
+Remember that package names carry most of the weight of describing functionality.
 
 **In Go, code executed as an application must be in a main package.**
 
 A *package* is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
 
-模块名和包名
-
-目录名和包名
+在
