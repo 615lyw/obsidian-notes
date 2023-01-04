@@ -153,6 +153,8 @@ Remember that package names carry most of the weight of describing functionality
 
 **In Go, code executed as an application must be in a main package.**
 
+A *package* is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
+
 模块名和包名
 
 目录名和包名
