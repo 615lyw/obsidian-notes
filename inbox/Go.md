@@ -144,3 +144,9 @@ if num := 9; num < 0 {
 Go code is grouped into packages, and packages are grouped into modules. 
 
 Your module specifies dependencies needed to run your code, including the Go version and the set of other modules it requires.
+
+(Go Modules 类似 [[Maven]]，方便管理依赖)
+
+[modules 命名最佳实践](https://go.dev/doc/modules/managing-dependencies#naming_module)
+
+Remember that package names carry most of the weight of describing functionality. The module path creates a namespace for those package names.
