@@ -138,3 +138,9 @@ if num := 9; num < 0 {
 # Switch
 
 可用于类型判断。
+
+# modules and packages
+
+Go code is grouped into packages, and packages are grouped into modules. 
+
+Your module specifies dependencies needed to run your code, including the Go version and the set of other modules it requires.
