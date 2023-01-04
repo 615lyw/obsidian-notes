@@ -153,3 +153,6 @@ Remember that package names carry most of the weight of describing functionality
 
 **In Go, code executed as an application must be in a main package.**
 
+模块名和包名
+
+目录名和包名
