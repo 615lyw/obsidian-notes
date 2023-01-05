@@ -150,7 +150,14 @@ if num := 9; num < 0 {
 - 一个 directory 下只能存在一个 package
 - 按惯例，package name 和 derectory name 保持一致
 
+# imports
 
+When importing a package, you can use the structs, functions and so on that this package exports.
+
+imports alias
+
+- 包别名
+- 解决包名冲突
 
 Remember that package names carry most of the weight of describing functionality.
 

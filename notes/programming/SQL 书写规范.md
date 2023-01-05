@@ -1,10 +1,7 @@
 Meta:
 
 - parents: [[MySQL SQL 书写]]
-- status: #New 
 - refs: 
-- create time: 2022-05-18 22:46:55
-- update time:  2022-05-18 22:46:55
 
 ---
 

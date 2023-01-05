@@ -1,7 +1,6 @@
 Meta:
 
 - Parents: [[JUnit]]
-- Status: #Update 
 - Refs: [@Before vs @BeforeClass vs @BeforeEach vs @BeforeAll | Baeldung](https://www.baeldung.com/junit-before-beforeclass-beforeeach-beforeall)
 
 ---

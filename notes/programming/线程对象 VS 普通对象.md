@@ -1,10 +1,7 @@
 Meta:
 
 - parents: [[Java 并发编程]]
-- status: #Update
 - refs: [22 | Executor与线程池：如何创建正确的线程池？-极客时间](https://time.geekbang.org/column/article/90771)
-- create time: 2022-05-18 22:22:36
-- update time:  2022-05-18 22:22:36
 
 ---
 
