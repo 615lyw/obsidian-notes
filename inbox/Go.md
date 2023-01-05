@@ -158,4 +158,6 @@ Remember that package names carry most of the weight of describing functionality
 
 A *package* is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
 
-在
+# GOROOT and GOPATH
+
+GOROOT 即 Go 安装目录，GOPATH 类似本地 MAVEN 仓库。
