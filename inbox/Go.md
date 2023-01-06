@@ -1,6 +1,6 @@
 ---
 date created: 2023-01-03, 22:06:49
-date modified: 2023-01-03, 22:40:16
+date modified: 2023-01-06, 12:33:55
 ---
 
 # variables
@@ -139,31 +139,27 @@ if num := 9; num < 0 {
 
 可用于类型判断。
 
-# module
+# package
 
-(Go Modules 类似 [[Maven]]，方便管理依赖)
-
-[modules 命名最佳实践](https://go.dev/doc/modules/managing-dependencies#naming_module)
-
-# packages
-
+- A *package* is a collection of source files in the same directory
 - 一个 directory 下只能存在一个 package
 - 按惯例，package name 和 derectory name 保持一致
+- *main* package 中的 `func main()` 是程序开始执行点
 
-# imports
+# import
 
-When importing a package, you can use the structs, functions and so on that this package exports.
+- When importing a package, you can use the menbers that this package **export**s
+- imports alias feature
+    - 实现包别名，简化使用. e.g `fmt.Println` -> `f.Println`
+    - 解决包名冲突
 
-imports alias
+# module
 
-- 包别名
-- 解决包名冲突
+(Go module 类似 [[Maven]]，方便管理依赖)
 
-Remember that package names carry most of the weight of describing functionality.
-
-**In Go, code executed as an application must be in a main package.**
-
-A *package* is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
+- [modules 命名最佳实践](https://go.dev/doc/modules/managing-dependencies#naming_module)
+- 在 module 根目录下存在 *go. mod* 文件，类似 *POM. xml*，其中定义了 *module path* (在 import package 时表示 module root derectory)
+- import package 时 package path syntax: `module_path(module_root_derectory)/the_filesystem_path_to_package/package_name`
 
 # GOROOT and GOPATH
 
