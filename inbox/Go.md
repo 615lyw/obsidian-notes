@@ -3,6 +3,14 @@ date created: 2023-01-03, 22:06:49
 date modified: 2023-01-06, 12:33:55
 ---
 
+# Introduction
+
+- C/C++ 因为编译时间长导致开发效率低，Java 编译时间短但执行效率低
+- Go：快速编译，高效执行，易于开发
+- 编译型+静态语言
+- 垃圾回收
+- 并发
+
 # variables
 
 ## Declaring Variables
