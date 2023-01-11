@@ -198,6 +198,13 @@ if num := 9; num < 0 {
 - 在 module 根目录下存在 *go. mod* 文件，类似 *POM. xml*，其中定义了 *module path* (在 import package 时表示 module root derectory)
 - import package 时 package path syntax: `module_path(module_root_derectory)/the_filesystem_path_to_package/package_name`
 
+# Arrays
+
+
+# Slices
+
+
+
 # GOROOT and GOPATH
 
 GOROOT 即 Go 安装目录，GOPATH 类似本地 MAVEN 仓库。
