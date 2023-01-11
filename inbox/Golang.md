@@ -11,6 +11,71 @@ date modified: 2023-01-06, 12:33:55
 - 垃圾回收
 - 并发
 
+# Types
+
+
+
+# constants
+
+Ref:
+
+- https://go.dev/ref/spec#Constants
+- https://www.callicoder.com/golang-typed-untyped-constants/
+- https://go.dev/ref/spec#Constant_expressions
+
+**Literals are (untyped and unamed) constants.**
+
+- interger constants, e.g: `100`
+- string constants, e.g: `Hello`
+- boolean constants, e.g: `true`
+- ...
+
+## typed and untyped constants
+
+这里的 typed 和 untyped 指的是 Golang 中的 [[Golang#Types]].
+
+### 语法
+
+- typed constants
+    - `const a int = 1234`
+    - `const b string = "Hi"`
+- untyped constants
+    - `const c = 4567`
+    - `const d = 42.68`
+
+### untyped constant 赋值给 typed constant or typed variable
+
+the value which is untyped allows to assign it to any variable whose type is compatible with it.
+
+e.g:
+
+```
+var myInt int = 1
+var myFloat float64 = 1
+var myFloat32 float32 = 4.5
+// 后面的值是 untyped，只要前面的 type 可以表示后面的值，则可以赋值
+```
+
+### Constants and Type inference : Default Type
+
+Go can **infer the type of a variable from the value** that is used to initialize it. So you can declare a variable with an initial value, but without any type information, and Go will automatically determine the type.
+
+every untyped constant has a default type.
+
+| untyped constant | default type |
+| ---------------- | ------------ |
+| integers         | `int`        |
+| floats           | `float64`    |
+| booleans         | `bool`         |
+| strings          | `string`             |
+
+### Constant expressions
+
+Ref: https://go.dev/ref/spec#Constant_expressions
+
+
+
+
 # variables
 
 ## Declaring Variables
@@ -90,42 +155,6 @@ kinds:
 
 - `float32` : 32 bits
 - `float64` : 64 bits
-
-# constants
-
-Syntax:
-
-`const CONSTNAME type = value`
-
-- Constants can be declared both inside and outside of a function
-- Constant names are usually written in uppercase letters
-
-Constant Types:
-
-- Typed constants
-- Untyped constants: In this case, the type of the constant is inferred from the value (means the compiler decides the type of the constant, based on the value).
-
-Multiple Constants Declaration
-
-Multiple constants can be grouped together into a block **for readability**.
-
-```go
-package main
-
-import ("fmt")
-
-const (
-  A int = 1
-  B = 3.14
-  C = "Hi!"
-)
-
-func main() {
-  fmt.Println(A)
-  fmt.Println(B)
-  fmt.Println(C)
-}
-```
 
 # If/Else
 
