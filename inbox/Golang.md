@@ -1,6 +1,6 @@
 ---
 date created: 2023-01-03, 22:06:49
-date modified: 2023-01-06, 12:33:55
+date modified: 2023-01-13, 22:53:16
 ---
 
 # Introduction
@@ -12,8 +12,6 @@ date modified: 2023-01-06, 12:33:55
 - 并发
 
 # Types
-
-
 
 # constants
 
@@ -28,7 +26,7 @@ Ref:
 - interger constants, e.g: `100`
 - string constants, e.g: `Hello`
 - boolean constants, e.g: `true`
-- ...
+- …
 
 ## typed and untyped constants
 
@@ -72,9 +70,6 @@ every untyped constant has a default type.
 ### Constant expressions
 
 Ref: https://go.dev/ref/spec#Constant_expressions
-
-
-
 
 # variables
 
@@ -200,10 +195,7 @@ if num := 9; num < 0 {
 
 # Arrays
 
-
 # Slices
-
-
 
 # GOROOT and GOPATH
 
