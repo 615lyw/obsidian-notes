@@ -52,7 +52,11 @@ public interface NameService {
 
 **综上：Spring Cloud OpenFeign 是对 Feign 的增强，增加了对 Spring MVC 注解的支持。（一般语境下没必要分得特别清楚）**
 
-# 使用时注意事项
+# 指定 url 方便调试
 
-# 方便调试
+# 打印请求和响应日志
+
+Ref: https://www.baeldung.com/java-feign-logging
+
+
 
