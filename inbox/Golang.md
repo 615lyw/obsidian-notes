@@ -7,9 +7,20 @@ date modified: 2023-01-13, 22:53:16
 
 - C/C++ 因为编译时间长导致开发效率低，Java 编译时间短但执行效率低
 - Go：快速编译，高效执行，易于开发
-- 编译型+静态语言
+- 静态编译型+静态语言
 - 垃圾回收
 - 并发
+
+# 分号
+
+Go 语言不需要在语句或者声明的末尾添加分号，除非一行上有多条语句。编译器会主动把特定符号（标识符、字面量、`break continue fallthrough return ++ -- ) }` 中的任意符号）后的换行符转换为分号。
+
+# 命名
+
+- 驼峰式
+- 包名一般总是用小写字母
+- 对于局部变量等小作用域的变量尽量使用短小的名字，例如 `i`
+- 像 ASCII 和 HTML 这样的缩略词则避免使用大小写混合的写法，它们可能被称为 htmlEscape、HTMLEscape 或 escapeHTML，但不会是 escapeHtml
 
 # Types
 
@@ -151,26 +162,6 @@ kinds:
 - `float32` : 32 bits
 - `float64` : 64 bits
 
-# If/Else
-
-A statement can precede conditionals; any variables declared in this statement **are available in the current and all subsequent branches.**
-
-```go
-if num := 9; num < 0 {
-    fmt.Println(num, "is negative")
-} else if num < 10 {
-    fmt.Println(num, "has 1 digit")
-} else {
-    fmt.Println(num, "has multiple digits")
-}
-```
-
-没有三元运算符。
-
-# Switch
-
-可用于类型判断。
-
 # package
 
 - A *package* is a collection of source files in the same directory
@@ -192,8 +183,6 @@ if num := 9; num < 0 {
 - [modules 命名最佳实践](https://go.dev/doc/modules/managing-dependencies#naming_module)
 - 在 module 根目录下存在 *go. mod* 文件，类似 *POM. xml*，其中定义了 *module path* (在 import package 时表示 module root derectory)
 - import package 时 package path syntax: `module_path(module_root_derectory)/the_filesystem_path_to_package/package_name`
-
-# Arrays
 
 # Slices
 
