@@ -55,16 +55,16 @@ redo 日志是**物理日志**，记录了物理级别页面修改（页面的�
 
 - 参数 0：事务提交时，redo log 仍留在 redo log buffer 中，并不会写入 redo log 文件
 - 参数 1（默认）：事务提交时，将 redo log buffer 中的 redo log 写入 redo log 文件并持久化到磁盘
-- 参数 2：事务提交时，将 redo log buffer 中的 redo log 写入 redo log 文件（注意：写入文件并不代表持久化到磁盘上了，参考 [[Page Cache]]）
+- 参数 2：事务提交时，将 redo log buffer 中的 redo log 写入 redo log 文件（注意：写入文件并不代表持久化到磁盘上了，参考 [[Page Cache]]，实际为写入操作系统缓存中）
 
 ![CleanShot2022-07-27at10.43.41](https://pic-bed-615.oss-cn-beijing.aliyuncs.com/CleanShot%202022-07-27%20at%2010.43.41.png)
 
-## innodb_flush_log_at_trx_commit 为 0 和 2 的时候，什么时候才将 redo log 写入磁盘？
+## 当 innodb_flush_log_at_trx_commit 为 0 和 2 的时候，什么时候才将 redo log 写入磁盘？
 
 InnoDB 的后台线程每隔 1 秒：
 
-- 针对参数 0 ：会把缓存在 redo log buffer 中的 redo log ，通过调用 `write()` 写到操作系统的 [[Page Cache]]，然后调用 `fsync()` 持久化到磁盘。所以参数为 0 的策略，MySQL 进程的崩溃会导致上一秒钟所有事务数据的丢失;
-- 针对参数 2 ：调用 `fsync()`，将缓存在操作系统中 [[Page Cache]] 里的 redo log 持久化到磁盘。所以参数为 2 的策略，较取值为 0 情况下更安全，**因为 MySQL 进程的崩溃并不会丢失数据，只有在操作系统崩溃或者系统断电的情况下，上一秒钟所有事务数据才可能丢失。**
+- 针对参数 0 ：会把缓存在 redo log buffer 中的 redo log ，通过调用 `write()` 写到操作系统的 [[Page Cache]]，然后调用 `fsync()` 持久化到磁盘。所以参数为 0 的策略，MySQL 进程的崩溃会导致上一秒钟所有事务数据的丢失
+- 针对参数 2 ：调用 `fsync()`，将缓存在操作系统中 [[Page Cache]] 里的 redo log 持久化到磁盘。所以参数为 2 的策略，较取值为 0 情况下更安全，**因为 MySQL 进程的崩溃并不会丢失数据，只有在操作系统崩溃或者系统断电的情况下，上一秒钟所有事务数据才可能丢失**
 
 # redo log 写入文件的过程
 
