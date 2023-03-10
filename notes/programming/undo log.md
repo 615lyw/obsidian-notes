@@ -7,7 +7,7 @@ date modified: 2022-07-27, 10:28:13
 
 - alias: **撤销日志**，回滚日志
 - parent :: [[MOC MySQL]]
-- siblings :: [[redolog]]，[[binlog]]
+- siblings :: [[redo log]]，[[binlog]]
 - child :: [[redo log VS undo log]]
 - refs:
     - [MySQL 是怎样运行的：从根儿上理解 MySQL - 小孩子4919 - 掘金课程](https://juejin.cn/book/6844733769996304392/section/6844733770067607566)

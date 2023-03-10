@@ -18,7 +18,7 @@ date modified: 2022-09-13, 23:19:02
 - [事务](notes/programming/事务.md)
 - [synchronized](notes/programming/synchronized.md)
 - [Git](notes/programming/Git.md)
-- [redolog](notes/programming/redolog.md)
+- [redo log](redo%20log.md)
 - [Unicode](notes/programming/Unicode.md)
 - …
 

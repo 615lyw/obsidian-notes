@@ -6,7 +6,7 @@ date modified: 2022-07-27, 10:28:07
 # Meta
 
 - alias:
-- parent :: [[redolog]]，[[undo log]]
+- parent :: [[redo log]]，[[undo log]]
 - siblings ::
 - child ::
 - refs:

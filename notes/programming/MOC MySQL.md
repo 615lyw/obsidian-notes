@@ -9,7 +9,7 @@ date modified: 2022-06-14, 14:54:18
     - [[InnoDB 存储引擎]]
     - [[MyISAM 索引原理]]
     - 日志
-        - [[redolog]]
+        - [[redo log]]
         - [[undo log]]
         - [[binlog]]
     - [[Buffer Pool]]

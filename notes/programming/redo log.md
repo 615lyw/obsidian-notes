@@ -7,7 +7,7 @@ date modified: 2022-07-28, 23:31:25
 
 - alias:
 - parent :: [[MOC MySQL]]
-- siblings :: [[undo log]]
+- siblings :: [[undo log]]，[[binlog]]
 - child ::
 - refs:
     - [MySQL 日志：undo log、redo log、binlog 有什么用？ | 小林coding](https://xiaolincoding.com/mysql/log/how_update.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-redo-log)
@@ -85,3 +85,4 @@ InnoDB 的后台线程每隔 1 秒：
 
 # 两阶段提交
 
+[[redo log 和 binlog 的两阶段提交]]
