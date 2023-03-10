@@ -29,6 +29,10 @@ binlog 是 binary log 的缩写，即二进制日志。特点：
 
 事务执行过程中产生的 binlog 写入 Server 层的 binlog cache 中，事务提交时再从 binlog cache 中写入 binlog 文件中。
 
+https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog
+
+`sync_binlog=1` default, Enables synchronization of the binary log to disk before transactions are committed.
+
 # 两阶段提交
 
 [[redo log 和 binlog 的两阶段提交]]
