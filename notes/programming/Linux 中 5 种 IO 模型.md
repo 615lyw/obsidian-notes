@@ -29,23 +29,27 @@ I/O 两阶段：
 
 用户进程发起系统调用 `recvfrom`，上述两阶段均阻塞等待。
 
+![[Pasted image 20230318192148.png]]
+
 # 非阻塞 I/O
 
-用户进程发起系统调用 `recvfrom`，若此时数据还未准备好会立即返回一个 error code，而不会阻塞用户进程。用户进程需要一直轮询检查数据是否准备好。
+用户进程发起系统调用 `recvfrom`，若此时数据还未准备好会立即返回一个 error code，而不会阻塞用户进程。用户进程需要一直轮询检查数据是否准备好。当数据准备好时，用户线程还需等待数据从内核空间复制到用户空间。
 
 > `recvfrom` 接受一个 flag 参数用于配置当没有可用数据时阻塞还是立即返回一个 error code。
 
+![[Pasted image 20230318192127.png]]
+
 # I/O 多路复用
 
-即常说 select、epoll、poll (三种系统调用)。[[IO 多路复用-select、epoll、poll]]
-
-涉及两个系统调用：`select` 和 `recvfrom`。
+select、epoll、poll 三者都是 I/O 多路复用系统调用。[[IO 多路复用-select、epoll、poll]]
 
 用户进程调用 select 时，select 会去检查多个 socket，若存在某个 socket 数据已准备好，则返回；若没有则阻塞。
 
-用户进程再调用 `recvfrom` 等待数据从操作系统内核空间拷贝到用户空间。
+当有数据可用时，用户进程再调用 `recvfrom` 等待数据从内核空间拷贝到用户空间。
 
 特点：一个用户进程能同时等待多个 socket，其中任意一个进入读就绪状态，则 select 函数返回。
+
+![[Pasted image 20230318192533.png]]
 
 # 异步 I/O
 
