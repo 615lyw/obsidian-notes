@@ -31,11 +31,13 @@ I/O 两阶段：
 
 # 非阻塞 I/O
 
-用户进程发起系统调用 `recvfrom`，若此时数据还未准备好，操作系统会立即返回一个 error，而不会阻塞用户进程。用户进程一直轮询检查数据是否准备好。
+用户进程发起系统调用 `recvfrom`，若此时数据还未准备好会立即返回一个 error code，而不会阻塞用户进程。用户进程需要一直轮询检查数据是否准备好。
+
+> `recvfrom` 接受一个 flag 参数用于配置当没有可用数据时阻塞还是立即返回一个 error code。
 
 # I/O 多路复用
 
-即常说 select、epoll、poll。[[IO 多路复用-select、epoll、poll]]
+即常说 select、epoll、poll (三种系统调用)。[[IO 多路复用-select、epoll、poll]]
 
 涉及两个系统调用：`select` 和 `recvfrom`。
 
