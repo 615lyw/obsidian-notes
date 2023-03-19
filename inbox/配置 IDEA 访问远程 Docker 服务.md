@@ -6,7 +6,7 @@ date modified: 2023-03-19, 19:42:46
 # Meta
 
 - alias:
-- parent :: [[Docker]]
+- parent :: [[Docker]]，[[$ IDEA Manual]]
 - siblings ::
 - child ::
 - refs:
