@@ -1,6 +1,6 @@
 ---
 date created: 2022-03-31, 14:03:48
-date modified: 2022-06-08, 14:59:30
+date modified: 2023-03-29, 20:50:48
 ---
 
 # Meta
@@ -16,11 +16,13 @@ date modified: 2022-06-08, 14:59:30
 
 # Java 字符与字符串
 
-`char` 为基本数据类型，大小为 2 字节，`Class Character` 为其包装类。
+`char` 为基本数据类型，大小为 2 字节，[[Class Character]] 为其包装类。
 
-> **更新（2022-05-25）**：char 保存的是字符的 [[UTF-16]] 编码。之前以为是 Unicode Code Point，后参考 《Java 核心技术卷 I- 第三章 - 数据类型 -Unicode 与 char》以及 UFT-16 编码方式，发现在 BMP 层字符的 Unicode Code Point 恰好等于 UTF-16 编码后的 Code Unit。
+> **更新（2022-05-25）**：char 保存的是字符的 [[UTF-16]] 编码！
+>
+> 之前以为是 Unicode Code Point，后参考 《Java 核心技术卷 I- 第三章 - 数据类型 -Unicode 与 char》以及 UFT-16 编码方式，发现在 BMP 层字符的 Unicode Code Point 恰好等于 UTF-16 编码后的 Code Unit。
 
-字符的 Unicode 码点与字符的二进制编码序列中间还存在一层 Unicode 编码实现方案（[[Unicode#实现方式]]）。
+字符的 Unicode Code Point 与字符的二进制编码序列中间还存在一层 Unicode 编码实现方案（[[Unicode#实现方式]]）。
 
 一个英文字符或一个中文字符都可以用一个 `char` 表示。
 

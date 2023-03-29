@@ -25,7 +25,7 @@ public final class String implements java.io.Serializable, Comparable<String>, C
 
 ## JDK 9 中为什么 String 底层存储由 `char[]` 改为 `byte[]`？
 
-绝大部分字符串对象只包含 Latin-1 可表示的字符，Latin-1 编码方案下，byte 占一个字节 (8 位)，char 占用 2 个字节（16），byte 相较 char 节省一半的内存空间。
+绝大部分字符串对象只包含 Latin-1 可表示的字符，Latin-1 编码方案下，byte 占一个字节 (8 位)，char 占用 2 个字节（16 位），byte 相较 char 节省一半的内存空间。
 
 ## String 具有不变性含义
 
