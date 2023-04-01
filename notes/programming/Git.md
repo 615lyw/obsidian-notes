@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-03, 16:02:28
-date modified: 2022-08-13, 17:43:43
+date modified: 2023-04-02, 00:09:02
 ---
 
 # Meta
@@ -434,15 +434,18 @@ Date:   Sun Oct 11 23:40:07 2020 +0800
 
 ### 分支合并
 
-合并分为两种：
+#### merge
 
-- Fast-forward (—ff)
-- No-fast-foward (—no-ff)
-    - merge
-        - `git merge target_branch` ：将目标分支合并至当前分支
-    - rebase
-        - 原理：找到两个分支的最近公共祖先，对比当前分支相对于祖先的历次提交提取成临时文件，依次在目标分支的最新节点上“回放 replay”
-    - 2 种合并策略最终结果是一样的
+`git merge target_branch` ：将目标分支合并至当前分支
+
+#### rebase
+
+例如想把分支 A 合并到分支 B 上，操作流程：
+
+1. 在分支 A 上执行 `git rebase B`：以 B 为基底执行变基
+    1. 原理：找到两个分支的最近公共祖先 C，对比当前分支 A 相对于祖先 C 的多次 commit，并依次提取成多个临时文件，在目标分支 B 的最新节点上“回放 replay”这些临时文件，看上去就像 A 在基底 B 的 HEAD 基础上进行了多次 commit
+    2. 结果：分支 A HEAD 指针领先于分支 B HEAD 指针多个 commit
+2. 切换到分支 B 上执行：`git merge A`：让分支 B 的 HEAD 指针快进合并到分支 A 的 HEAD 指针
 
 ### 撤销分支合并
 
